@@ -31,18 +31,18 @@ test("getName works.", () => {
 
 test("getId works", () => {
     const testId = 3;
-    const employeeCreation = new Employee(testId);
+    const employeeCreation = new Employee("Jennifer", testId);
     expect(employeeCreation.getId()).toBe(testId);
 })
 
 test("getEmail works", () => {
     const testEmail = "jlmayo22@gmail.com";
-    const employeeCreation = new Employee(testEmail);
+    const employeeCreation = new Employee("Jennifer", 3, testEmail);
     expect(employeeCreation.getEmail()).toBe(testEmail);
 })
 
 test("Role test", () => {
     const testRole = "Employee";
     const employeeCreation = new Employee("Jennifer", 2, "jlmayo22@gmail.com");
-    expect(employeeCreation.getRole()).toBe(returnValue);
+    expect(employeeCreation.getRole()).toBe(testRole);
 })
