@@ -6,6 +6,10 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
+const addNewManager = require('./src/new-manager');
+const addNewEngineer = require('./src/new-engineer');
+const addNewIntern = require('./src/new-intern');
+const profileCards = require('./src/employee-cards');
 
 
 const officeTeam = [];
@@ -113,3 +117,4 @@ const newIntern = [
         message: 'Do you want to continue?',
     },
 ];
+
