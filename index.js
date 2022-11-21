@@ -7,6 +7,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
 
+
 const officeTeam = [];
 
 const newManager = [
@@ -44,5 +45,71 @@ const newManager = [
             'Exit'
         ],
         message: 'Do you want to continue?'
+    },
+];
+
+const newEngineer = [
+    {
+        name: 'name',
+        type: 'input',
+        message: 'Enter the name of the new engineer',
+    },
+    {
+        name: 'id',
+        type: 'input',
+        message: 'Enter the Employee ID of the new engineer',
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: 'Enter the email address of the new engineer',
+    },
+    {
+        name: 'gitHub',
+        type: 'input',
+        message: 'Enter the GitHub username of the new engineer',
+    },
+    {
+        name: 'continue',
+        type: 'list',
+        choices: [
+            'Add Engineer',
+            'Add Intern',
+            'Exit'
+        ],
+        message: 'Do you want to continue?'
+    },
+];
+
+const newIntern = [
+    {
+        name: 'name',
+        type: 'input',
+        message: 'Enter the name of the new intern',
+    },
+    {
+        name: 'id',
+        type: 'input',
+        message: 'Enter the Employee ID of the new intern',
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: 'Enter the email address of the new intern',
+    },
+    {
+        name: 'school',
+        type: 'input',
+        message: 'Enter the current school for the new intern',
+    },
+    {
+        name: 'continue',
+        type: 'list',
+        choices: [
+            'Add Engineer',
+            'Add Intern',
+            'Exit'
+        ],
+        message: 'Do you want to continue?',
     },
 ];
