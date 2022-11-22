@@ -9,7 +9,8 @@ const Manager = require('./lib/Manager');
 const addNewManager = require('./src/new-manager');
 const addNewEngineer = require('./src/new-engineer');
 const addNewIntern = require('./src/new-intern');
-const profileCards = require('./src/employee-cards');
+const employeeCardsWrap = require('./src/employee-cards');
+const { profile } = require("console");
 
 
 const officeTeam = [];
@@ -117,4 +118,67 @@ const newIntern = [
         message: 'Do you want to continue?',
     },
 ];
+
+ask(newManager);
+
+function ask(questionArr) {
+    inquirer
+        .prompt(questionArr)
+        .then((teammate) => {
+            officeTeam.push(teammate);
+
+            if (teammate.continue === 'Add Engineer') {
+                ask(newEngineer);
+            } else if (teammate.continue === 'Add Intern') {
+                ask(newIntern);
+            } else {
+                createProfile(officeTeam);
+            }
+        })
+        .catch((err) => console.log(err));
+}
+
+function createProfile(officeTeam) {
+
+    const profiles = officeTeam.map((teammate) => {
+        const { name, id, email } = teammate;
+
+        if (teammate.hasSpecialId('officeNumber')) {
+            const { officeNumber } = teammate;
+            return new Manager(name, id, email, officeNumber);
+        }
+
+        if(teammate.hasSpecialId('github')) {
+            const { github } = teammate;
+            return new Engineer(name, id, email, github);
+        }
+
+        if(teammate.hasSpecialId('school')) {
+            const { school } = teammate;
+            return new Intern(name, id, email, school);
+        }
+    });
+
+    createHTML(profiles);
+}
+
+function createHTML(profiles) {
+    let employeeCards = '';
+    profiles.forEach((profile) => {
+        if (profile instanceof Manager) {
+            const card = newManagerCard(profile);
+            employeeCards += card;
+        } else if (profile instanceof Engineer) {
+            const card = newEngineerCard(profile);
+            employeeCards += card;
+        } else if (profile instanceof Intern) {
+            const card = newInternCard(profile);
+            employeeCards += card;
+        }
+    })
+
+const newHtml = employeeCardsWrap(employeeCards);
+
+writeHtml(newHtml);
+};
 
