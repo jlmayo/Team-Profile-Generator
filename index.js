@@ -143,17 +143,17 @@ function createProfile(officeTeam) {
     const profiles = officeTeam.map((teammate) => {
         const { name, id, email } = teammate;
 
-        if (teammate.hasSpecialId('officeNumber')) {
+        if (teammate.hasOwnProperty('officeNumber')) {
             const { officeNumber } = teammate;
             return new Manager(name, id, email, officeNumber);
         }
 
-        if(teammate.hasSpecialId('github')) {
+        if(teammate.hasOwnProperty('github')) {
             const { github } = teammate;
             return new Engineer(name, id, email, github);
         }
 
-        if(teammate.hasSpecialId('school')) {
+        if(teammate.hasOwnProperty('school')) {
             const { school } = teammate;
             return new Intern(name, id, email, school);
         }
@@ -166,13 +166,13 @@ function createHTML(profiles) {
     let employeeCards = '';
     profiles.forEach((profile) => {
         if (profile instanceof Manager) {
-            const card = newManagerCard(profile);
+            const card = addNewManager(profile);
             employeeCards += card;
         } else if (profile instanceof Engineer) {
-            const card = newEngineerCard(profile);
+            const card = addNewEngineer(profile);
             employeeCards += card;
         } else if (profile instanceof Intern) {
-            const card = newInternCard(profile);
+            const card = addNewIntern(profile);
             employeeCards += card;
         }
     })
