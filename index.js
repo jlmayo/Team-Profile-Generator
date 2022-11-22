@@ -182,3 +182,9 @@ const newHtml = employeeCardsWrap(employeeCards);
 writeHtml(newHtml);
 };
 
+function writeHtml(newHtml) {
+    fs.writeFile('./dist/index.html', newHtml, (err) => {
+        if (err) throw err;
+        console.log('HTML created successfully');
+    });
+};
