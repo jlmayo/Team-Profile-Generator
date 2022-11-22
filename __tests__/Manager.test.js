@@ -7,7 +7,7 @@ test("Office Number created", () => {
     expect(employeeCreation.officeNumber).toBe(testOfficeNumber);
 });
 
-test("officeNumber returns an office number", () => {
+test("getOfficeNumber returns an office number", () => {
     const testOfficeNumber = "5";
     const employeeCreation = new Manager("Jennifer", 3, "jlmayo22@gmail.com", testOfficeNumber);
     expect(employeeCreation.getOfficeNumber()).toBe(testOfficeNumber);

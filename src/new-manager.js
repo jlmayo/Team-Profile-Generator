@@ -1,4 +1,4 @@
-const newManager = (profile) => `
+const newManagerCard = (profile) => `
     <div class="card employee-card">
         <div class="card-header bg-secondary text-white">
             <h2 class="card-title">${profile.getName()}</h2>
@@ -6,7 +6,7 @@ const newManager = (profile) => `
         </div>
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${profile.getID()}</li>
+                <li class="list-group-item">ID: ${profile.getId()}</li>
                 <li class="list-group-item">Email: <a href="${profile.getEmail()}">${profile.getEmail()}</a></li>
                 <li class="list-group-item">Office number: ${profile.getOfficeNumber()}</li>
             </ul>
@@ -14,4 +14,4 @@ const newManager = (profile) => `
     </div>
 `;
 
-module.exports = newManager;
+module.exports = newManagerCard;

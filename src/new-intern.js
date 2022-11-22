@@ -1,4 +1,4 @@
-const newIntern = (profile) => `
+const newInternCard = (profile) => `
 
 <div class="card employee-card">
     <div class="card-header bg-secondary text-white">
@@ -7,7 +7,7 @@ const newIntern = (profile) => `
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">ID: ${profile.getID()}</li>
+            <li class="list-group-item">ID: ${profile.getId()}</li>
             <li class="list-group-item">Email: <a href="${profile.getEmail()}">${profile.getEmail()}</a></li>
             <li class="list-group-item">${profile.getSchool()}</li>
         </ul>
@@ -15,4 +15,4 @@ const newIntern = (profile) => `
 </div>
 `;
 
-module.exports = newIntern;
+module.exports = newInternCard;

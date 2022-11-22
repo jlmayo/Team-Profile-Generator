@@ -1,4 +1,4 @@
-const employeeCards = (newCards) => `
+const employeeNewCards = (newCards) => `
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,17 +16,29 @@ const employeeCards = (newCards) => `
                         <h1 class="display-1 text-center text-white">The Office Team</h1>
                     </div>
                 </div>
-            </div>
             <div class="container">
                 <div class="row">
                     <div class="row team-area col-12 d-flex justify-content-center">
                         ${newCards}
                     </div>
+                    <div class="card employee-card">
+                    <div class="card-header bg-secondary text-white">
+                        <h2 class="card-title">Michael Scott</h2>
+                        <h3 class="card-title"><i class="fa-solid fa-mug-hot"></i>  Manager</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: 1</li>
+                            <li class="list-group-item">Email: <a href="mailto:mscott@dundermifflin.com">mscott@dundermifflin.com</a></li>
+                            <li class="list-group-item">Office number: 1</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+        
+                </div>
         </div>
     </body>
 </html>  
 `;
 
-module.exports = employeeCards;
+module.exports = employeeNewCards;

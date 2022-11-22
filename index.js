@@ -19,7 +19,7 @@ const newManager = [
     {
         name: 'role',
         type: 'confirm',
-        message: 'Team Profile Generator. Click to proceed',
+        message: 'Team Profile Generator. Do you want to add a new Manager?',
     },
     {
         name: 'name',
@@ -185,6 +185,6 @@ writeHtml(newHtml);
 function writeHtml(newHtml) {
     fs.writeFile('./dist/index.html', newHtml, (err) => {
         if (err) throw err;
-        console.log('HTML created successfully');
+        console.log('Employee Profile created successfully');
     });
 };
