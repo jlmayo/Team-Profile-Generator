@@ -7,7 +7,7 @@ const newManagerCard = (profile) => `
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${profile.getId()}</li>
-                <li class="list-group-item">Email: <a href="${profile.getEmail()}">${profile.getEmail()}</a></li>
+                <li class="list-group-item">Email: <a href="mailto: ${profile.getEmail()}">${profile.getEmail()}</a></li>
                 <li class="list-group-item">Office number: ${profile.getOfficeNumber()}</li>
             </ul>
         </div>

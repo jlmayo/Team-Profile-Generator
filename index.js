@@ -19,7 +19,7 @@ const newManager = [
     {
         name: 'role',
         type: 'confirm',
-        message: 'Team Profile Generator. Do you want to add a new Manager?',
+        message: 'Team Profile Generator. Would you like to create a new Team Profile?',
     },
     {
         name: 'name',
@@ -70,7 +70,7 @@ const newEngineer = [
         message: 'Enter the email address of the new engineer',
     },
     {
-        name: 'gitHub',
+        name: 'github',
         type: 'input',
         message: 'Enter the GitHub username of the new engineer',
     },
