@@ -1,4 +1,4 @@
-const Engineer = require("..lib/Engineer");
+const Engineer = require("../lib/Engineer");
 
 test("GitHub creation works", () => {
     const testGitHub = "jlmayo";

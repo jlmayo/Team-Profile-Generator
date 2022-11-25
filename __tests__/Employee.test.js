@@ -5,25 +5,25 @@ test("Creates a new employee.", () => {
     expect(typeof(employeeCreation)).toBe("object");
 })
 
-test("Name test.", () => {
+test("Name test", () => {
     const name = "Jennifer";
     const employeeCreation = new Employee(name);
     expect(employeeCreation.name).toBe(name);
 })
 
-test("Id test.", () => {
+test("Id test", () => {
     const id = 3;
-    const employeeCreation = new Employee(id);
+    const employeeCreation = new Employee("Jennifer", id);
     expect(employeeCreation.id).toBe(id);
 })
 
-test("Email test.", () => {
+test("Email test", () => {
     const email = "jlmayo22@gmail.com";
-    const employeeCreation = new Employee(email);
-    expect(employeeCreation.email).toBe(email);
+    const employeeCreation = new Employee("Jennifer", 3, email);
+    expect(employeeCreation.email).toEqual(email);
 })
 
-test("getName works.", () => {
+test("getName works", () => {
     const testName = "Jennifer";
     const employeeCreation = new Employee(testName);
     expect(employeeCreation.getName()).toBe(testName);
