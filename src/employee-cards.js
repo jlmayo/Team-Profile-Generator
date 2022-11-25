@@ -21,46 +21,6 @@ const employeeNewCards = (newCards) => `
                     <div class="row team-area col-12 d-flex justify-content-center">
                         ${newCards}
                     </div>
-                    <div class="card employee-card">
-                        <div class="card-header bg-secondary text-white">
-                            <h2 class="card-title">Michael Scott</h2>
-                            <h3 class="card-title"><i class="fa-solid fa-mug-hot"></i>  Manager</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">ID: 1</li>
-                                <li class="list-group-item">Email: <a href="mailto:mscott@dundermifflin.com">mscott@dundermifflin.com</a></li>
-                                <li class="list-group-item">Office number: 1</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card employee-card">
-                    <div class="card-header bg-secondary text-white">
-                        <h2 class="card-title">Jim Halpert</h2>
-                        <h3 class="card-title"><i class="fa-solid fa-laptop"></i>  Engineer</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">ID: 2</li>
-                            <li class="list-group-item">Email: <a href="mailto:jhalpert@dundermifflin.com">jhalpert@dundermifflin.com</a></li>
-                            <li class="list-group-item">Office number: 1</li>
-                        </ul>
-                    </div>
-                    <div class="card-header bg-secondary text-white">
-                    <h2 class="card-title">Max Carver</h2>
-                    <h3 class="card-title"><i class="fa-solid fa-school"></i>  Intern</h3>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">ID: 99</li>
-                        <li class="list-group-item">Email: <a href="mailto:mcarver@dundermifflin.com">mcarver@dundermifflin.com</a></li>
-                        <li class="list-group-item">Office number: 25</li>
-                    </ul>
-                </div>
-            </div>
-
-                </div>
-
                 </div>
             </div>
         </div>

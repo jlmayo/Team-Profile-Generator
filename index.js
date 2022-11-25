@@ -183,8 +183,8 @@ writeHtml(newHtml);
 };
 
 function writeHtml(newHtml) {
-    fs.appendFile('./dist/index.html', newHtml, (err) => {
+    fs.writeFile('./dist/index.html', newHtml, (err) => {
         if (err) throw err;
-        console.log('Employee Profile created successfully');
+        console.log('New Team Profile created successfully');
     });
 };
